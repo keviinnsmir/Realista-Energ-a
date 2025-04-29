@@ -1,0 +1,642 @@
+/* Variables CSS para mejorar la gestión de colores */
+:root {
+    --primary-color: #00a551;
+    --secondary-color: #ef7f11;
+    --text-color: #111;
+    --background-color: #f4f4f4;
+    --footer-background: #222;
+    --hover-color: #ef7f11;
+    --border-radius: 8px;
+}
+
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--background-color);
+}
+
+/* Top bar */
+.top-bar {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+
+.top-bar a {
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+/* Navegación */
+nav {
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Líneas superiores e inferiores (verde y naranja) */
+.nav-top {
+    border-top: 14px solid var(--secondary-color);
+}
+
+.nav-bottom {
+    border-bottom: 10px solid var(--secondary-color);
+    margin-bottom: 4px;
+}
+
+.nav-bottom::after {
+    content: "";
+    display: block;
+    height: 10px;
+    background-color: var(--primary-color);
+    margin-top: 4px;
+}
+
+/* Navbar con logo a la izquierda y menú centrado */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.logo-img {
+    height: 120px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+/* Menú centrado */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.menu li {
+    position: relative;
+    border-bottom: 3px solid transparent;
+    margin-bottom: 5px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.menu li:hover {
+    border-bottom: 3px solid var(--primary-color);
+}
+
+/* Dropdown */
+.has-dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 160px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 100;
+}
+
+.has-dropdown:hover .dropdown-content,
+.has-dropdown.active .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    display: block;
+    color: #444;
+}
+
+/* Logo Iberdrola */
+.logo-iberdrola {
+    height: 45px;
+    width: auto;
+    margin-left: 20px;
+}
+
+/* Hamburguesa */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #143a79;
+}
+
+/* Responsive menú para móviles */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+        margin-left: auto;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        padding: 10px 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        border-top: 1px solid #eee;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: static;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        background-color: #f9f9f9;
+    }
+
+    .dropdown-content a {
+        color: var(--text-color);
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo-img {
+        height: 80px;
+    }
+
+    .has-dropdown.open .dropdown-content {
+        display: block;
+        animation: slideDown 0.3s ease-out;
+    }
+
+    .dropdown-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .dropdown-toggle .arrow {
+        transition: transform 0.3s ease;
+    }
+
+    .has-dropdown.open .arrow {
+        transform: rotate(180deg);
+    }
+}
+
+/* Animación para el submenú */
+@keyframes slideDown {
+    from {
+        height: 0;
+    }
+    to {
+        height: auto;
+    }
+}
+
+/* Estilo del icono hamburguesa transformándose en X */
+.hamburger {
+    transition: transform 0.3s ease;
+}
+
+.hamburger.open i {
+    transform: rotate(90deg);
+    color: var(--secondary-color);
+}
+
+/* Imagen de portada */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(80%);
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 30px;
+    animation: slideIn 1s ease-out forwards, scaleUp 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Estilos para la sección de ubicación y contacto */
+.ubicacion-contacto {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.ubicacion {
+    flex: 1;
+    max-width: 45%;
+    min-width: 300px;
+}
+
+.contacto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.contacto h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.contacto p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.contacto strong {
+    color: #333;
+}
+
+.descubremas-btn {
+    padding: 12px 30px;
+    font-size: 1.125rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.descubremas-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.ubicacion iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    .ubicacion-contacto {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .ubicacion, .contacto {
+        max-width: 100%;
+    }
+
+    .ubicacion iframe {
+        height: 250px;
+    }
+
+    .contacto h2 {
+        font-size: 2rem;
+    }
+
+    .contacto p {
+        font-size: 1rem;
+    }
+
+    .descubremas-btn {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 50px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-links,
+  .footer-socials,
+  .footer-subscribe {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer-links h4,
+  .footer-socials h4,
+  .footer-subscribe h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #00a551;
+  }
+  
+  .footer-links ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin: 10px 0;
+  }
+  
+  .footer-links ul li a {
+    text-decoration: none;
+    color: #bbb;
+    transition: color 0.3s;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #00a551;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icons a {
+    color: #bbb;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #00a551;
+  }
+  
+  .footer-subscribe form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .footer-subscribe input {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+    width: calc(100% - 130px);
+    min-width: 200px;
+  }
+  
+  .footer-subscribe button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #00a551;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .footer-subscribe button:hover {
+    background-color: #ef7f11;
+  }
+  
+  .footer-logo {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-logo img {
+    width: 550px;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-logo img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Políticas y derechos */
+  .footer-policies {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .footer-policies ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+  }
+  
+  .footer-policies ul li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  .footer-policies ul li a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .footer-policies ul li a:hover {
+    color: #00a551;
+  }
+  
+  .footer-bottom {
+    font-size: 1rem;
+    color: #00a551;
+  }
+  
+  /* Responsivo para móviles */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-subscribe form {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-subscribe input,
+    .footer-subscribe button {
+      width: 100%;
+    }
+  
+    .footer-policies ul li {
+      display: block;
+      margin: 5px 0;
+    }
+  }
+  
+    
+
+/* Estilos para el formulario de contacto */
+.formulario-contacto {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--primary-color);
+}
+
+.form-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+.form-field label {
+    display: block;
+    font-size: 1.125rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+}
+
+.form-field textarea {
+    height: 150px;
+    resize: none;
+}
+
+.checkbox-label {
+    font-size: 1rem;
+    color: #555;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.125rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+    }
+}

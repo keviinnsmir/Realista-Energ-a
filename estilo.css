@@ -1,0 +1,667 @@
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Top bar */
+.top-bar {
+    background: #00a551;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+.top-bar a {
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+/* Navegación */
+nav {
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px #0000000d;
+}
+
+/* Línea superior (verde) */
+.nav-top {
+    border-top: 14px solid #ef7f11;
+}
+
+/* Línea inferior (naranja) */
+.nav-bottom {
+    border-bottom: 10px solid #ef7f11;
+    margin-bottom: 4px; /* Añadido: separación entre la línea naranja y la verde inferior */
+}
+
+/* Línea verde de la parte inferior */
+.nav-bottom::after {
+    content: "";
+    display: block;
+    height: 10px;
+    background-color: #00a551;
+    margin-top: 4px; /* Añadido: separación entre la línea naranja y la verde inferior */
+}
+
+
+/* Navbar con logo a la izquierda y menú centrado */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Esto asegura que el logo y la hamburguesa estén a los lados */
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.logo-img {
+    height: 120px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+.logo-img:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+/* Menú centrado */
+/* Menú */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center; /* Esto centra el menú */
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.menu li {
+    position: relative;
+    border-bottom: 3px solid transparent;
+    margin-bottom: 5px; /* Añadido: espacio entre las líneas de color */
+}
+
+.menu a {
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.menu li:hover {
+    border-bottom: 3px solid #00a551;
+}
+
+
+/* Dropdown */
+.has-dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 160px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 100;
+}
+
+.has-dropdown:hover .dropdown-content,
+.has-dropdown.active .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    display: block;
+    color: #444;
+}
+
+/* Logo Iberdrola */
+.logo-iberdrola {
+    height: 45px;
+    width: auto;
+    margin-left: 20px;
+}
+
+/* Hamburguesa */
+/* Estilos para la hamburguesa */
+/* MENÚ HAMBURGUESA MODERNO */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 2001;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #00a551;
+  margin: 4px 0;
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Menú general */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #00a551;
+}
+
+/* MÓVIL */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+  }
+
+  .menu.active {
+    max-height: 500px;
+    padding: 10px 0;
+  }
+
+  .menu li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+    display: none;
+  }
+
+  .has-dropdown:hover .dropdown-content,
+  .has-dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    padding: 8px 0;
+    display: block;
+  }
+}
+
+
+/* Imagen de portada con contenido superpuesto */
+/* Imagen de portada con contenido superpuesto */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Fija la altura */
+    overflow: hidden;
+}
+
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(44%); /* Oscurece la imagen al 60% */
+}
+
+
+/* Contenedor del texto centrado */
+/* Estilo del título Bienvenidos */
+/* Estilo del título Bienvenidos */
+.hero-content h1 {
+    font-size: 2.9rem; /* Tamaño grande para destacarse */
+    font-weight: bold;
+    color: #00a551;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Espaciado de letras sutil pero moderno */
+    padding-bottom: 30px;
+    animation: slideIn 1s ease-out forwards, scaleUp 0.5s ease-out forwards;
+}
+
+/* Animación de entrada (deslizar desde abajo) */
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animación de escalado (para darle un toque llamativo) */
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Efecto de subrayado animado */
+.hero-content h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px; /* Subrayado grueso y destacado */
+    background: linear-gradient(45deg, #00a551, #ef7f11); /* Degradado para el subrayado */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    animation: underlineAnim 15s ease-in-out forwards, highlight 15s ease-in-out infinite;
+}
+
+/* Animación para subrayado */
+@keyframes underlineAnim {
+    0% {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+    }
+    50% {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+    100% {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+    }
+}
+
+/* Animación del subrayado (para un toque de resplandor) */
+@keyframes highlight {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px #ef7f11, 0 0 30px #ef7f11;
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5);
+    }
+}
+
+
+
+/* Imagen de portada */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Fija la altura de la portada */
+    overflow: hidden;
+}
+
+/* Estilo para la imagen de portada */
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el área sin deformarse */
+    display: block;
+}
+
+/* Contenedor del logo centrado */
+.hero-logo {
+    position: absolute;
+    top: 50%;  /* Centra el logo verticalmente */
+    left: 50%; /* Centra el logo horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar completamente */
+    z-index: 2;
+}
+
+/* Tamaño del logo */
+.hero-logo img {
+    width: auto;
+    height: 120px;  /* Puedes ajustar el tamaño a tu preferencia */
+}
+/* Estilo para la sección de introducción */
+.introduccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .introduccion-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 30px;
+  }
+  
+  .introduccion-img img {
+    width: 100%;
+    height: auto;
+    max-width: 500px; /* Limitar el tamaño de la imagen */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .introduccion-text {
+    max-width: 600px;
+    color: #333;
+  }
+  
+  .introduccion-text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00a551; /* Color verde, acorde con la imagen de marca */
+    margin-bottom: 20px;
+  }
+  
+  .introduccion-text p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .descubremas-btn {
+    padding: 12px 30px;
+    font-size: 1.125rem;
+    background-color: #00a551;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .descubremas-btn:hover {
+    background-color: #ef7f11; /* Un color más brillante en hover */
+  }
+  
+
+/* Estilo para la sección de introducción */
+.introduccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Fondo gris claro */
+  }
+  
+  .introduccion-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacio entre texto e imagen */
+    max-width: 1200px;
+    width: 100%;
+    gap: 30px; /* Espacio entre el texto y la imagen */
+  }
+  
+  /* Imagen a la derecha */
+  .introduccion-img img {
+    width: 100%;
+    height: auto;
+    max-width: 500px; /* Limitar el tamaño máximo de la imagen */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  /* Estilo para el texto a la izquierda */
+  .introduccion-text {
+    max-width: 600px;
+    color: #333;
+  }
+  
+  .introduccion-text h2 {
+    font-size: 2.5rem; /* Tamaño de fuente grande para el título */
+    font-weight: bold;
+    color: #00a551; /* Color verde de la marca */
+    margin-bottom: 20px;
+  }
+  
+  .introduccion-text p {
+    font-size: 1.125rem; /* Tamaño de fuente moderado */
+    line-height: 1.6;
+    color: #555; /* Color gris suave para el texto */
+    margin-bottom: 30px;
+  }
+  
+  /* Botón para descubrir más */
+  .descubremas-btn {
+    padding: 12px 30px;
+    font-size: 1.125rem;
+    background-color: #00a551; /* Color verde brillante */
+    color: white;
+    text-decoration: none;
+    border-radius: 30px; /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .descubremas-btn:hover {
+    background-color: #ef7f11; /* Color naranja brillante cuando se pasa el mouse */
+  }
+
+  
+  /* Estilo general del footer */
+/* Footer general */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links,
+.footer-socials,
+.footer-subscribe {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-links h4,
+.footer-socials h4,
+.footer-subscribe h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #00a551;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 10px 0;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #bbb;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #00a551;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #bbb;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00a551;
+}
+
+.footer-subscribe form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-subscribe input {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  width: calc(100% - 130px);
+  min-width: 200px;
+}
+
+.footer-subscribe button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #00a551;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer-subscribe button:hover {
+  background-color: #ef7f11;
+}
+
+.footer-logo {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 550px;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Políticas y derechos */
+.footer-policies {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer-policies ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.footer-policies ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.footer-policies ul li a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.footer-policies ul li a:hover {
+  color: #00a551;
+}
+
+.footer-bottom {
+  font-size: 1rem;
+  color: #00a551;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-subscribe form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-subscribe input,
+  .footer-subscribe button {
+    width: 100%;
+  }
+
+  .footer-policies ul li {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+  

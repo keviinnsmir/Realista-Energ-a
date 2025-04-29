@@ -1,0 +1,482 @@
+/* Estilo básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Contenedor principal de contenido */
+.privacy-policy {
+    width: 80%; /* Limitar el ancho del contenido */
+    margin: 0 auto; /* Centrar el contenido en la pantalla */
+    padding: 30px 20px; /* Añadir un poco de espacio alrededor del contenido */
+}
+
+/* Estilo para los títulos (h1, h2) */
+h1 {
+    font-size: 36px;
+    text-align: left;  /* Título alineado a la izquierda */
+    color: #006c3f;
+    position: relative;
+    animation: titleEffect 1.5s ease-out forwards;
+    text-shadow: 2px 2px 10px #ffffff; /* Sombra sutil */
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-left: 20px; /* Espacio al lado izquierdo */
+}
+
+/* Títulos secundarios (h2) */
+h2 {
+    font-size: 28px;
+    position: relative;
+    color: #006c3f;
+    animation: titleEffect 1.5s ease-out forwards;
+    text-shadow: 2px 2px 10px #ffffff; /* Sombra sutil */
+    margin-top: 40px;
+    margin-bottom: 25px;
+    padding-left: 20px; /* Espacio al lado izquierdo */
+}
+
+/* Efectos de animación en los títulos */
+@keyframes titleEffect {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(10px);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Subtextos (p) */
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    position: relative;
+    font-family: 'Verdana', sans-serif;
+    text-align: justify;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Efecto de aparición para los párrafos (subtextos) */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para listas */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+ul li {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* Top bar */
+.top-bar {
+    background: #00a551;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+.top-bar a {
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+/* Navegación */
+nav {
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px #0000000d;
+}
+
+/* Línea superior (verde) */
+.nav-top {
+    border-top: 14px solid #ef7f11;
+}
+
+/* Línea inferior (naranja) */
+.nav-bottom {
+    border-bottom: 10px solid #ef7f11;
+    margin-bottom: 4px; /* Añadido: separación entre la línea naranja y la verde inferior */
+}
+
+/* Línea verde de la parte inferior */
+.nav-bottom::after {
+    content: "";
+    display: block;
+    height: 10px;
+    background-color: #00a551;
+    margin-top: 4px; /* Añadido: separación entre la línea naranja y la verde inferior */
+}
+
+/* Navbar con logo a la izquierda y menú centrado */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Esto asegura que el logo y la hamburguesa estén a los lados */
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.logo-img {
+    height: 120px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+.logo-img:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+/* Menú centrado */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center; /* Esto centra el menú */
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.menu li {
+    position: relative;
+    border-bottom: 3px solid transparent;
+    margin-bottom: 5px; /* Añadido: espacio entre las líneas de color */
+}
+
+.menu a {
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.menu li:hover {
+    border-bottom: 3px solid #006c3f;
+}
+
+/* Dropdown */
+/* Dropdown */
+.has-dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 100;
+}
+
+.has-dropdown:hover .dropdown-content,
+.has-dropdown.active .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-content a {
+  padding: 10px;
+  display: block;
+  color: #444;
+}
+/* MENÚ HAMBURGUESA MODERNO */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 2001;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #00a551;
+  margin: 4px 0;
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Menú general */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #00a551;
+}
+
+/* MÓVIL */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+  }
+
+  .menu.active {
+    max-height: 500px;
+    padding: 10px 0;
+  }
+
+  .menu li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+    display: none;
+  }
+
+  .has-dropdown:hover .dropdown-content,
+  .has-dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    padding: 8px 0;
+    display: block;
+  }
+}
+
+/* Estilo general del footer */
+/* Footer general */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links,
+.footer-socials,
+.footer-subscribe {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-links h4,
+.footer-socials h4,
+.footer-subscribe h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #00a551;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 10px 0;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #bbb;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #00a551;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #bbb;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00a551;
+}
+
+.footer-subscribe form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-subscribe input {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  width: calc(100% - 130px);
+  min-width: 200px;
+}
+
+.footer-subscribe button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #00a551;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer-subscribe button:hover {
+  background-color: #ef7f11;
+}
+
+.footer-logo {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 550px;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Políticas y derechos */
+.footer-policies {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer-policies ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.footer-policies ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.footer-policies ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.footer-policies ul li a:hover {
+  color: #00a551;
+}
+
+.footer-bottom {
+  font-size: 1rem;
+  color: #00a551;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-subscribe form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-subscribe input,
+  .footer-subscribe button {
+    width: 100%;
+  }
+
+  .footer-policies ul li {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+  
