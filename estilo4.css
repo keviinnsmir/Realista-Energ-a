@@ -312,11 +312,11 @@ body {
     justify-content: center;
     align-items: center;
     flex: 1;
-    padding: 20px;
+    padding: 100px;
 }
 
 .colaboradores-img img {
-    max-width: 100%;
+    max-width: 110%;
     height: auto;
     display: block;
 }
@@ -334,7 +334,7 @@ body {
 
     .colaboradores-img {
         justify-content: center;
-        padding: 10px 0;
+        padding: 20px 0;
     }
 }
 
@@ -363,8 +363,8 @@ body {
 }
 
 .project img {
-    width: 100%;
-    height: 200px;
+    width: 70%;
+    height: 250px;
     object-fit: cover;
 }
 

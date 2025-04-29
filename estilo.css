@@ -373,7 +373,7 @@ body {
 /* Tamaño del logo */
 .hero-logo img {
     width: auto;
-    height: 120px;  /* Puedes ajustar el tamaño a tu preferencia */
+    height: 100px;  /* Puedes ajustar el tamaño a tu preferencia */
 }
 /* Estilo para la sección de introducción */
 .introduccion {
@@ -396,7 +396,7 @@ body {
   .introduccion-img img {
     width: 100%;
     height: auto;
-    max-width: 500px; /* Limitar el tamaño de la imagen */
+    max-width: 200px; /* Limitar el tamaño de la imagen */
     border-radius: 8px; /* Bordes redondeados para la imagen */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
   }
