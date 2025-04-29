@@ -71,7 +71,7 @@ nav {
 }
 
 .logo-img {
-    height: 120px;
+    height: 100px;
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -86,26 +86,26 @@ nav {
     display: flex;
     gap: 30px;
     justify-content: center;
+    flex-grow: 1;
     margin: 0;
     padding: 0;
-    flex-grow: 1;
 }
 
 .menu li {
     position: relative;
     border-bottom: 3px solid transparent;
-    margin-bottom: 5px;
+    margin-bottom: 5px; /* Añadido: espacio entre las líneas de color */
 }
 
 .menu a {
     text-decoration: none;
-    color: var(--text-color);
+    color: #111;
     font-weight: bold;
     padding-bottom: 10px;
 }
 
 .menu li:hover {
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 3px solid #00a551;
 }
 
 /* Dropdown */
@@ -138,6 +138,7 @@ nav {
     color: #444;
 }
 
+
 /* Logo Iberdrola */
 .logo-iberdrola {
     height: 45px;
@@ -145,101 +146,110 @@ nav {
     margin-left: 20px;
 }
 
-/* Hamburguesa */
 .hamburger {
     display: none;
+    flex-direction: column;
     cursor: pointer;
-    font-size: 24px;
-    color: #143a79;
-}
-
-/* Responsive menú para móviles */
-@media screen and (max-width: 768px) {
+    z-index: 2001;
+  }
+  
+  .hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #00a551;
+    margin: 4px 0;
+    border-radius: 3px;
+    transition: 0.3s ease;
+  }
+  
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  
+  /* Menú general */
+  .menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .menu li a:hover {
+    color: #00a551;
+  }
+  
+  /* MÓVIL */
+  @media (max-width: 768px) {
     .hamburger {
-        display: block;
-        margin-left: auto;
+      display: flex;
     }
-
+  
     .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: white;
-        padding: 10px 0;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1000;
-        border-top: 1px solid #eee;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background-color: white;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.4s ease-in-out;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      z-index: 2000;
     }
-
+  
     .menu.active {
-        display: flex;
+      max-height: 500px;
+      padding: 10px 0;
     }
-
+  
+    .menu li {
+      margin: 10px 0;
+      text-align: center;
+    }
+  
     .dropdown-content {
-        display: none;
-        position: static;
-        box-shadow: none;
-        opacity: 1;
-        visibility: visible;
-        background-color: #f9f9f9;
+      position: static;
+      box-shadow: none;
+      background: transparent;
+      display: none;
     }
-
+  
+    .has-dropdown:hover .dropdown-content,
+    .has-dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+  
     .dropdown-content a {
-        color: var(--text-color);
+      padding: 8px 0;
+      display: block;
     }
-
-    .navbar {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .logo-img {
-        height: 80px;
-    }
-
-    .has-dropdown.open .dropdown-content {
-        display: block;
-        animation: slideDown 0.3s ease-out;
-    }
-
-    .dropdown-toggle {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-    }
-
-    .dropdown-toggle .arrow {
-        transition: transform 0.3s ease;
-    }
-
-    .has-dropdown.open .arrow {
-        transform: rotate(180deg);
-    }
-}
-
-/* Animación para el submenú */
-@keyframes slideDown {
-    from {
-        height: 0;
-    }
-    to {
-        height: auto;
-    }
-}
-
-/* Estilo del icono hamburguesa transformándose en X */
-.hamburger {
-    transition: transform 0.3s ease;
-}
-
-.hamburger.open i {
-    transform: rotate(90deg);
-    color: var(--secondary-color);
-}
-
+  }
+  
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+    
+  body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+  }
+  
 /* Imagen de portada */
 .hero {
     position: relative;

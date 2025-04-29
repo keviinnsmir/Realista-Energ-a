@@ -62,7 +62,7 @@ nav {
 }
 
 .logo-img {
-    height: 120px;
+    height: 100px;
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -72,64 +72,63 @@ nav {
 
 /* Menú centrado */
 /* Menú */
+/* Menú centrado */
 .menu {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    justify-content: center; /* Esto centra el menú */
-    margin: 0;
-    padding: 0;
-    flex-grow: 1;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
 }
 
 .menu li {
-    position: relative;
-    border-bottom: 3px solid transparent;
-    margin-bottom: 5px; /* Añadido: espacio entre las líneas de color */
+  position: relative;
+  border-bottom: 3px solid transparent;
+  margin-bottom: 5px; /* Añadido: espacio entre las líneas de color */
 }
 
 .menu a {
-    text-decoration: none;
-    color: #111;
-    font-weight: bold;
-    padding-bottom: 10px;
+  text-decoration: none;
+  color: #111;
+  font-weight: bold;
+  padding-bottom: 10px;
 }
 
 .menu li:hover {
-    border-bottom: 3px solid #00a551;
+  border-bottom: 3px solid #00a551;
 }
-
 
 /* Dropdown */
 .has-dropdown {
-    position: relative;
+  position: relative;
 }
 
 .dropdown-content {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    top: 30px;
-    left: 0;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 160px;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 100;
 }
 
 .has-dropdown:hover .dropdown-content,
 .has-dropdown.active .dropdown-content {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .dropdown-content a {
-    padding: 10px;
-    display: block;
-    color: #444;
+  padding: 10px;
+  display: block;
+  color: #444;
 }
-
 /* Logo Iberdrola */
 .logo-iberdrola {
     height: 45px;
@@ -232,6 +231,17 @@ nav {
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
 
 /* Imagen de portada con contenido superpuesto */
 /* Imagen de portada con contenido superpuesto */
