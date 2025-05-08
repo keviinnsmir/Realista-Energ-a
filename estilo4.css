@@ -8,20 +8,6 @@ body, html {
 }
 
 /* Top bar */
-.top-bar {
-    background: #00a551;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-    flex-wrap: wrap;
-}
-.top-bar a {
-    color: #ffffff;
-    margin-left: 20px;
-}
-
 /* Navegación */
 nav {
     background: #fff;
@@ -33,7 +19,7 @@ nav {
 
 /* Línea superior (verde) */
 .nav-top {
-    border-top: 14px solid #ef7f11;
+    border-top: 14px solid #ffffff;
 }
 
 /* Línea inferior (naranja) */
