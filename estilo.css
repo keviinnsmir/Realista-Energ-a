@@ -282,49 +282,6 @@ body {
         transform: scale(1);
     }
 }
-
-/* Efecto de subrayado animado */
-.hero-content h1::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 200%;
-    height: 5px; /* Subrayado grueso y destacado */
-    background: linear-gradient(45deg, #00a551, #ef7f11); /* Degradado para el subrayado */
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    animation: underlineAnim 15s ease-in-out forwards, highlight 15s ease-in-out infinite;
-}
-
-/* Animación para subrayado */
-@keyframes underlineAnim {
-    0% {
-        transform: scaleX(0);
-        transform-origin: bottom right;
-    }
-    50% {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
-    100% {
-        transform: scaleX(0);
-        transform-origin: bottom right;
-    }
-}
-
-/* Animación del subrayado (para un toque de resplandor) */
-@keyframes highlight {
-    0% {
-        box-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5);
-    }
-    50% {
-        box-shadow: 0 0 20px #ef7f11, 0 0 30px #ef7f11;
-    }
-    100% {
-        box-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5);
-    }
-}
 /* Imagen de portada */
 .hero {
     position: relative;
@@ -689,4 +646,37 @@ body {
   }
 }
 
-  
+/* Eliminar animaciones, transiciones y efectos visuales en móviles */
+@media (max-width: 768px) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .logo-img:hover,
+  .footer-logo img:hover,
+  .descubremas-btn:hover,
+  .menu li:hover,
+  .menu li a:hover,
+  .social-icons a:hover,
+  .footer-subscribe button:hover,
+  .footer-links ul li a:hover,
+  .footer-policies ul li a:hover {
+    transform: none !important;
+    color: inherit !important;
+    background-color: inherit !important;
+  }
+
+  .hero-content h1::after {
+    display: none !important;
+  }
+
+  .hamburger.active span:nth-child(1),
+  .hamburger.active span:nth-child(3) {
+    transform: none !important;
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 1 !important;
+  }
+}
