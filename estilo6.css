@@ -834,3 +834,36 @@
       margin: 5px 0;
     }
   }
+  /* Eliminar animaciones, transiciones y efectos visuales en móviles */
+@media (max-width: 768px) {
+  * {
+    transition: none !important;
+  }
+
+  .logo-img:hover,
+  .footer-logo img:hover,
+  .descubremas-btn:hover,
+  .menu li:hover,
+  .menu li a:hover,
+  .social-icons a:hover,
+  .footer-subscribe button:hover,
+  .footer-links ul li a:hover,
+  .footer-policies ul li a:hover {
+    transform: none !important;
+    color: inherit !important;
+    background-color: inherit !important;
+  }
+
+  .hero-content h1::after {
+    display: none !important;
+  }
+
+  .hamburger.active span:nth-child(1),
+  .hamburger.active span:nth-child(3) {
+    transform: none !important;
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 1 !important;
+  }
+}

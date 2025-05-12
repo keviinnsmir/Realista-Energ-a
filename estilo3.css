@@ -56,18 +56,11 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
 }
-
-
-
 .logo-img {
   height: 100px;
   width: auto;
   transition: transform 0.3s ease;
 }
-.logo-img:hover {
-  transform: rotate(5deg) scale(1.05);
-}
-
 /* Menú centrado */
 .menu {
   list-style: none;
@@ -95,7 +88,6 @@ nav {
 .menu li:hover {
   border-bottom: 3px solid #00a551;
 }
-
 /* Dropdown */
 .has-dropdown {
   position: relative;
@@ -124,13 +116,6 @@ nav {
   padding: 10px;
   display: block;
   color: #444;
-}
-
-/* Logo Iberdrola */
-.logo-iberdrola {
-  height: 45px;
-  width: auto;
-  margin-left: 20px;
 }
 
 /* Hamburguesa */
@@ -228,17 +213,17 @@ color: #00a551;
 }
 }
   
-  * {
+* {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-  }
+}
     
-  body {
+body {
       font-family: 'Arial', sans-serif;
       background-color: #f4f4f4;
       color: #333;
-  }
+}
   
 /* Imagen de portada */
 .hero {
@@ -255,38 +240,6 @@ color: #00a551;
     object-fit: cover;
     display: block;
     filter: brightness(80%);
-}
-
-.hero-content h1 {
-    font-size: 4.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    text-align: center;
-    position: relative;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding-bottom: 30px;
-    animation: slideIn 1s ease-out forwards, scaleUp 0.5s ease-out forwards;
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes scaleUp {
-    0% {
-        transform: scale(0.8);
-    }
-    100% {
-        transform: scale(1);
-    }
 }
 
 /* Estilos para la sección de ubicación y contacto */
@@ -639,4 +592,38 @@ color: #00a551;
     .submit-btn {
         font-size: 1rem;
     }
+}
+/* Eliminar animaciones, transiciones y efectos visuales en móviles */
+@media (max-width: 768px) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .logo-img:hover,
+  .footer-logo img:hover,
+  .descubremas-btn:hover,
+  .menu li:hover,
+  .menu li a:hover,
+  .social-icons a:hover,
+  .footer-subscribe button:hover,
+  .footer-links ul li a:hover,
+  .footer-policies ul li a:hover {
+    transform: none !important;
+    color: inherit !important;
+    background-color: inherit !important;
+  }
+
+  .hero-content h1::after {
+    display: none !important;
+  }
+
+  .hamburger.active span:nth-child(1),
+  .hamburger.active span:nth-child(3) {
+    transform: none !important;
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 1 !important;
+  }
 }
