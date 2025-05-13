@@ -225,23 +225,6 @@ body {
       color: #333;
 }
   
-/* Imagen de portada */
-.hero {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
-}
-
-.hero-img {
-    width: 100%;
-    height: auto;
-    max-height: 600px;
-    object-fit: cover;
-    display: block;
-    filter: brightness(80%);
-}
-
 /* Estilos para la sección de ubicación y contacto */
 .ubicacion-contacto {
     display: flex;
@@ -337,8 +320,8 @@ body {
 
 /* Estilos para el footer */
 .footer {
-    background-color: #222;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000000;
     padding: 40px 20px 20px;
     font-family: 'Segoe UI', sans-serif;
     margin-top: 50px;
@@ -379,7 +362,7 @@ body {
   
   .footer-links ul li a {
     text-decoration: none;
-    color: #bbb;
+    color: #000000;
     transition: color 0.3s;
   }
   
@@ -393,7 +376,7 @@ body {
   }
   
   .social-icons a {
-    color: #bbb;
+    color: #000000;
     font-size: 1.5rem;
     transition: color 0.3s;
   }
