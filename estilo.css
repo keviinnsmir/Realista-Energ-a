@@ -297,18 +297,29 @@ body {
 
 /* Contenedor del logo centrado */
 .hero-logo {
-    position: absolute;
-    top: 50%;  /* Centra el logo verticalmente */
-    left: 50%; /* Centra el logo horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta la posición para centrar completamente */
-    z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
 }
 
-/* Tamaño del logo */
 .hero-logo img {
-    width: auto;
-    height: 10px;  /* Puedes ajustar el tamaño a tu preferencia */
+  width: 100%;
+  max-width: 400px; /* Ajusta según necesidad (ej. 150px, 220px, etc.) */
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
 }
+
+@media (max-width: 768px) {
+  .hero-logo img {
+    max-width: 300px; /* Más pequeño en móviles */
+  }
+}
+
+
 /* Estilo para la sección de introducción */
 .introduccion {
     display: flex;
