@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -19,8 +18,6 @@
     background-color: #f4f4f4;
   }
   
-  /* Top bar */
-  /* Navegación */
   nav {
     background: #fff;
     position: sticky;
@@ -28,28 +25,24 @@
     z-index: 1000;
     box-shadow: 0 2px 5px #0000000d;
   }
-  
-  /* Línea superior (verde) */
+ 
   .nav-top {
     border-top: 14px solid #ffffff;
   }
   
-  /* Línea inferior (naranja) */
   .nav-bottom {
     border-bottom: 10px solid #ef7f11;
-    margin-bottom: 4px; /* Añadido: separación entre la línea naranja y la verde inferior */
+    margin-bottom: 4px; 
   }
   
-  /* Línea verde de la parte inferior */
   .nav-bottom::after {
     content: "";
     display: block;
     height: 10px;
     background-color: #00a551;
-    margin-top: 4px; /* Añadido: separación entre la línea naranja y la verde inferior */
+    margin-top: 4px;
   }
   
-  /* Navbar con logo a la izquierda y menú centrado */
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -68,7 +61,6 @@
     transform: rotate(5deg) scale(1.05);
   }
   
-  /* Menú centrado */
   .menu {
     list-style: none;
     display: flex;
@@ -82,7 +74,7 @@
   .menu li {
     position: relative;
     border-bottom: 3px solid transparent;
-    margin-bottom: 5px; /* Añadido: espacio entre las líneas de color */
+    margin-bottom: 5px; 
   }
   
   .menu a {
@@ -96,7 +88,6 @@
     border-bottom: 3px solid #00a551;
   }
   
-  /* Dropdown */
   .has-dropdown {
     position: relative;
   }
@@ -125,17 +116,13 @@
     display: block;
     color: #444;
   }
-  
-  /* Logo Iberdrola */
+
   .logo-iberdrola {
     height: 45px;
     width: auto;
     margin-left: 20px;
   }
-  
-  /* Hamburguesa */
-  /* Estilos para la hamburguesa */
-  /* MENÚ HAMBURGUESA MODERNO */
+
   .hamburger {
   display: none;
   flex-direction: column;
@@ -162,7 +149,6 @@
   transform: translateY(-7px) rotate(-45deg);
   }
   
-  /* Menú general */
   .menu {
   display: flex;
   list-style: none;
@@ -180,7 +166,6 @@
   color: #00a551;
   }
   
-  /* MÓVIL */
   @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -227,7 +212,6 @@
     display: block;
   }
   }
-  /* SMART MOBILITY SECTION */
   .smartmobility-section {
     padding: 60px 20px;
     background: #f5f9f6;
@@ -309,7 +293,6 @@
     background-color: #005f27;
   }
   
-  /* BENEFITS SECTION */
   .smartmobility-benefits {
     text-align: center;
     padding: 60px 20px;
@@ -359,8 +342,6 @@
     font-size: 0.95em;
     color: #555;
   }
-  /* Estilo general del footer */
-/* Footer general */
 .footer {
   background-color: #ffffff;
   color: #000000;
@@ -420,19 +401,18 @@
 .footer-socials {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra horizontalmente el contenido */
+  align-items: center; 
   text-align: center;
 }
 
-/* Estilo para los íconos de redes sociales */
 .social-icons a {
-  color: #00a551; /* Color verde por defecto */
+  color: #00a551; 
   font-size: 1.5rem;
-  transition: color 0.3s ease; /* Suaviza la transición de color */
+  transition: color 0.3s ease; 
 }
 
 .social-icons a:hover {
-  color: #ef7f11; /* Color naranja al pasar el ratón */
+  color: #ef7f11; 
 }
 
 
@@ -484,7 +464,6 @@
   transform: scale(1.1);
 }
 
-/* Políticas y derechos */
 .footer-policies {
   background-color: #333;
   padding: 10px 0;
@@ -518,7 +497,6 @@
   color: #00a551;
 }
 
-/* Responsivo para móviles */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -542,45 +520,74 @@
   }
 }
 
-/* Responsivo para móviles */
 @media (max-width: 768px) {
   .introduccion-container {
-      flex-direction: column; /* Cambia a una dirección de columna en móviles */
-      align-items: center; /* Centra los elementos */
-      text-align: center; /* Centra el texto */
+      flex-direction: column; 
+      align-items: center; 
+      text-align: center;
   }
 
   .introduccion-img img {
-      max-width: 100%; /* Asegura que la imagen ocupe el 100% del ancho en móviles */
-      margin-bottom: 20px; /* Añade un margen entre la imagen y el texto */
+      max-width: 100%; 
+      margin-bottom: 20px; 
   }
 
   .introduccion-text {
-      max-width: 100%; /* El texto ocupará el 100% del ancho */
+      max-width: 100%; 
   }
 }
-/* Estilo para el icono de WhatsApp */
 .whatsapp-icon {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: white; /* Fondo blanco */
-  color: #25d366; /* Color del icono (verde de WhatsApp) */
-  border-radius: 50%; /* Hace que sea un círculo */
-  padding: 10px; /* Espaciado interno pequeño */
-  font-size: 24px; /* Tamaño de la fuente para hacerlo pequeño */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto flotante */
-  text-decoration: none; /* Elimina el subrayado del enlace */
-  z-index: 1000; /* Asegura que el icono esté por encima de otros elementos */
-  width: 50px; /* Ancho del círculo */
-  height: 50px; /* Alto del círculo */
+  background-color: white; 
+  color: #25d366; 
+  border-radius: 50%; 
+  padding: 10px; 
+  font-size: 24px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  text-decoration: none; 
+  z-index: 1000;
+  width: 50px; 
+  height: 50px; 
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-/* Efecto de hover para cuando el usuario pasa el ratón por encima */
 .whatsapp-icon:hover {
-  background-color: #25d366; /* Fondo verde cuando se pasa el ratón */
-  color: white; /* Cambiar el color del icono a blanco al hacer hover */
+  background-color: #25d366; 
+  color: white; 
+}
+@media (max-width: 768px) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .logo-img:hover,
+  .footer-logo img:hover,
+  .descubremas-btn:hover,
+  .menu li:hover,
+  .menu li a:hover,
+  .social-icons a:hover,
+  .footer-subscribe button:hover,
+  .footer-links ul li a:hover,
+  .footer-policies ul li a:hover {
+    transform: none !important;
+    color: inherit !important;
+    background-color: inherit !important;
+  }
+
+  .hero-content h1::after {
+    display: none !important;
+  }
+
+  .hamburger.active span:nth-child(1),
+  .hamburger.active span:nth-child(3) {
+    transform: none !important;
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 1 !important;
+  }
 }
