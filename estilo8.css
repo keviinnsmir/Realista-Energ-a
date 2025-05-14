@@ -186,240 +186,150 @@ color: #00a551;
   display: block;
 }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+header {
+    background-color: #008A3D;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-}
-.hero {
-    position: relative;
-    width: 100%;
-    height: 800px; 
-    overflow: hidden;
-}
-.hero-img {
-    width: 100%;
-    height: auto;
-    max-height: 600px;
-    object-fit: cover;
-    display: block;
-    filter: brightness(44%); 
-}
-.hero-content h1 {
-  font-size: 2.9rem;
-  font-weight: bold;
-  text-align: center;
-  color: #00a551;
-  text-transform: capitalize; 
-}
-.no-capitalize {
-  text-transform: lowercase; 
-}
-@keyframes slideIn {
-    0% {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-@keyframes scaleUp {
-    0% {
-        transform: scale(0.8);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-.hero {
-    position: relative;
-    width: 100%;
-    height: 615px; 
-    overflow: hidden;
-}
-.hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    display: block;
+h1 {
+    margin: 0;
 }
 
-.hero-logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  text-align: center;
+header {
+    background-color: #008A3D;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-.hero-logo img {
-  width: 100%;
-  max-width: 400px; 
-  height: auto;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  .hero-logo img {
-    max-width: 300px; 
-  }
-}
-.introduccion {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-  }
-  
-  .introduccion-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    width: 100%;
-    gap: 30px;
-  }
-  
-  .introduccion-img img {
-    width: 100%;
-    height: auto;
-    max-width: 200px; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
-  }
-  
-  .introduccion-text {
-    max-width: 600px;
-    color: #333;
-  }
-  
-  .introduccion-text h2 {
+header h1 {
     font-size: 2.5rem;
-    font-weight: bold;
-    color: #00a551; 
-    margin-bottom: 20px;
-  }
-  
-  .introduccion-text p {
-    font-size: 1.125rem;
-    line-height: 1.6;
-    color: #555;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease;
+}
+
+.content img {
+    width: 20%;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #00000026;
+    margin-bottom: 10px;
+}
+
+.text {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.text h2 {
+    color: #008A3D;
+    margin-bottom: 10px;
+}
+
+/* Valores */
+.valores {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.valores h2 {
+    color: #008A3D;
     margin-bottom: 30px;
-  }
-  
-  .descubremas-btn {
-    padding: 12px 30px;
-    font-size: 1.125rem;
-    background-color: #00a551;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .descubremas-btn:hover {
-    background-color: #ef7f11; 
-  }
-.introduccion {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 20px;
-  background-color: #f9f9f9;
 }
 
-.introduccion-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  width: 100%;
-  gap: 30px;
-}
-.introduccion-img img {
-  width: 100%;
-  height: auto;
-  max-width: 500px; 
-  border-radius: 8px; 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+.valores-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-.introduccion-text {
-  max-width: 600px;
-  color: #333;
+.valor-card {
+    background-color: #e6f7ee;
+    border-left: 5px solid #008A3D;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: left;
+    transition: transform 0.3s ease;
 }
 
-.introduccion-text h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #00a551; 
-  margin-bottom: 20px;
+.valor-card:hover {
+    transform: scale(1.05);
 }
 
-.introduccion-text p {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  color: #555; 
-  margin-bottom: 30px;
+.valor-card h3 {
+    color: #008A3D;
+    margin-bottom: 10px;
 }
 
-.descubremas-btn {
-  padding: 12px 30px;
-  font-size: 1.125rem;
-  background-color: #00a551; 
-  color: white;
-  text-decoration: none;
-  border-radius: 30px; 
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+/* Slider */
+.testimonios {
+    background-color: #dff5e6;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-.descubremas-btn:hover {
-  background-color: #ef7f11; 
+.slider {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.slide.active {
+    display: block;
+    animation: fadeIn 1s ease-in-out;
+}
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 768px) {
-  .introduccion-container {
-      flex-direction: column; 
-      align-items: center; 
-      text-align: center; 
-  }
+    .container, .valores-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .introduccion-img img {
-      max-width: 100%; 
-      margin-bottom: 20px; 
-  }
-
-  .introduccion-text {
-      max-width: 100%; 
-  }
+    .content {
+        width: 100%;
+    }
 }
-  .descubremas-btn {
-    padding: 12px 30px;
-    font-size: 1.125rem;
-    background-color: #00a551; 
-    color: white;
-    text-decoration: none;
-    border-radius: 30px; 
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  }
-  
-  .descubremas-btn:hover {
-    background-color: #ef7f11; 
-  }
 .footer {
   background-color: #ffffff;
   color: #000000;

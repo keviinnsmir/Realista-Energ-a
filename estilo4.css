@@ -1,5 +1,3 @@
-/* Reset general */
-/* Reset básico */
 body, html {
     margin: 0;
     padding: 0;
@@ -7,8 +5,6 @@ body, html {
     background-color: #f4f4f4;
 }
 
-/* Top bar */
-/* Navegación */
 nav {
     background: #fff;
     position: sticky;
@@ -17,27 +13,22 @@ nav {
     box-shadow: 0 2px 5px #0000000d;
 }
 
-/* Línea superior (verde) */
 .nav-top {
     border-top: 14px solid #ffffff;
 }
 
-/* Línea inferior (naranja) */
 .nav-bottom {
     border-bottom: 10px solid #ef7f11;
-    margin-bottom: 4px; /* Añadido: separación entre la línea naranja y la verde inferior */
+    margin-bottom: 4px; 
 }
 
-/* Línea verde de la parte inferior */
 .nav-bottom::after {
     content: "";
     display: block;
     height: 10px;
     background-color: #00a551;
-    margin-top: 4px; /* Añadido: separación entre la línea naranja y la verde inferior */
+    margin-top: 4px; 
 }
-
-/* Navbar con logo a la izquierda y menú centrado */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -59,7 +50,6 @@ nav {
     transform: rotate(5deg) scale(1.05);
 }
 
-/* Menú centrado */
 .menu {
     list-style: none;
     display: flex;
@@ -73,7 +63,7 @@ nav {
 .menu li {
     position: relative;
     border-bottom: 3px solid transparent;
-    margin-bottom: 5px; /* Añadido: espacio entre las líneas de color */
+    margin-bottom: 5px; 
 }
 
 .menu a {
@@ -86,8 +76,6 @@ nav {
 .menu li:hover {
     border-bottom: 3px solid #00a551;
 }
-
-/* Dropdown */
 .has-dropdown {
     position: relative;
 }
@@ -117,9 +105,6 @@ nav {
     color: #444;
 }
 
-/* Hamburguesa */
-/* Estilos para la hamburguesa */
-/* MENÚ HAMBURGUESA MODERNO */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -146,7 +131,6 @@ nav {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Menú general */
 .menu {
   display: flex;
   list-style: none;
@@ -164,7 +148,6 @@ nav {
   color: #00a551;
 }
 
-/* MÓVIL */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -224,7 +207,6 @@ body {
     color: #333;
 }
 
-/* Estilo para la sección de colaboradores */
 .colaboradores {
     padding: 80px 20px;
     background-color: #ffffff;
@@ -232,7 +214,6 @@ body {
     overflow: hidden;
 }
 
-/* Contenedor de los bloques de colaborador */
 .colaboradores-container {
     display: flex;
     justify-content: space-between;
@@ -300,10 +281,9 @@ body {
     display: block;
 }
 
-/* Ajustes para móviles */
 @media (max-width: 768px) {
     .colaboradores-container {
-        flex-direction: column !important; /* Anula reverse si está aplicado */
+        flex-direction: column !important; 
         text-align: center;
     }
 
@@ -361,7 +341,6 @@ body {
     color: #555;
 }
 
-/* Animaciones */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -408,7 +387,7 @@ body {
     }
 }
 
-/* Responsivo para dispositivos móviles */
+
 @media (max-width: 768px) {
     .colaboradores-container {
         flex-direction: column;
@@ -428,9 +407,6 @@ body {
         width: 100%;
     }
 }
-
-/* Estilo general del footer */
-/* Footer general */
 .footer {
   background-color: #ffffff;
   color: #000000;
@@ -490,19 +466,19 @@ body {
 .footer-socials {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra horizontalmente el contenido */
+  align-items: center; 
   text-align: center;
 }
 
-/* Estilo para los íconos de redes sociales */
+
 .social-icons a {
-  color: #00a551; /* Color verde por defecto */
+  color: #00a551; 
   font-size: 1.5rem;
-  transition: color 0.3s ease; /* Suaviza la transición de color */
+  transition: color 0.3s ease; 
 }
 
 .social-icons a:hover {
-  color: #ef7f11; /* Color naranja al pasar el ratón */
+  color: #ef7f11; 
 }
 
 
@@ -553,8 +529,6 @@ body {
 .footer-logo img:hover {
   transform: scale(1.1);
 }
-
-/* Políticas y derechos */
 .footer-policies {
   background-color: #333;
   padding: 10px 0;
@@ -587,8 +561,6 @@ body {
   font-size: 1rem;
   color: #00a551;
 }
-
-/* Responsivo para móviles */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -612,8 +584,6 @@ body {
   }
 }
 
-
-/* Responsivo para móviles */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -636,7 +606,6 @@ body {
         margin: 5px 0;
     }
 }
-/* Eliminar animaciones, transiciones y efectos visuales en móviles */
 @media (max-width: 768px) {
     * {
       animation: none !important;
@@ -670,28 +639,26 @@ body {
       opacity: 1 !important;
     }
   }
-  /* Estilo para el icono de WhatsApp */
 .whatsapp-icon {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: white; /* Fondo blanco */
-  color: #25d366; /* Color del icono (verde de WhatsApp) */
-  border-radius: 50%; /* Hace que sea un círculo */
-  padding: 10px; /* Espaciado interno pequeño */
-  font-size: 24px; /* Tamaño de la fuente para hacerlo pequeño */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto flotante */
-  text-decoration: none; /* Elimina el subrayado del enlace */
-  z-index: 1000; /* Asegura que el icono esté por encima de otros elementos */
-  width: 50px; /* Ancho del círculo */
-  height: 50px; /* Alto del círculo */
+  background-color: white;
+  color: #25d366; 
+  border-radius: 50%; 
+  padding: 10px;
+  font-size: 24px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  text-decoration: none; 
+  z-index: 1000; 
+  width: 50px; 
+  height: 50px; 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Efecto de hover para cuando el usuario pasa el ratón por encima */
 .whatsapp-icon:hover {
-  background-color: #25d366; /* Fondo verde cuando se pasa el ratón */
-  color: white; /* Cambiar el color del icono a blanco al hacer hover */
+  background-color: #25d366; 
+  color: white; 
 }

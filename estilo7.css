@@ -4,9 +4,6 @@ body, html {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f4f4f4;
 }
-
-/* Top bar */
-/* Navegación */
 nav {
   background: #fff;
   position: sticky;
@@ -14,28 +11,20 @@ nav {
   z-index: 1000;
   box-shadow: 0 2px 5px #0000000d;
 }
-
-/* Línea superior (verde) */
 .nav-top {
   border-top: 14px solid #ffffff;
 }
-
-/* Línea inferior (naranja) */
 .nav-bottom {
   border-bottom: 10px solid #ef7f11;
-  margin-bottom: 4px; /* Añadido: separación entre la línea naranja y la verde inferior */
+  margin-bottom: 4px; 
 }
-
-/* Línea verde de la parte inferior */
 .nav-bottom::after {
   content: "";
   display: block;
   height: 10px;
   background-color: #00a551;
-  margin-top: 4px; /* Añadido: separación entre la línea naranja y la verde inferior */
+  margin-top: 4px; 
 }
-
-/* Navbar con logo a la izquierda y menú centrado */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -53,8 +42,6 @@ nav {
 .logo-img:hover {
   transform: rotate(5deg) scale(1.05);
 }
-
-/* Menú centrado */
 .menu {
   list-style: none;
   display: flex;
@@ -68,7 +55,7 @@ nav {
 .menu li {
   position: relative;
   border-bottom: 3px solid transparent;
-  margin-bottom: 5px; /* Añadido: espacio entre las líneas de color */
+  margin-bottom: 5px; 
 }
 
 .menu a {
@@ -81,8 +68,6 @@ nav {
 .menu li:hover {
   border-bottom: 3px solid #00a551;
 }
-
-/* Dropdown */
 .has-dropdown {
   position: relative;
 }
@@ -111,17 +96,11 @@ nav {
   display: block;
   color: #444;
 }
-
-/* Logo Iberdrola */
 .logo-iberdrola {
   height: 45px;
   width: auto;
   margin-left: 20px;
 }
-
-/* Hamburguesa */
-/* Estilos para la hamburguesa */
-/* MENÚ HAMBURGUESA MODERNO */
 .hamburger {
 display: none;
 flex-direction: column;
@@ -147,8 +126,6 @@ opacity: 0;
 .hamburger.active span:nth-child(3) {
 transform: translateY(-7px) rotate(-45deg);
 }
-
-/* Menú general */
 .menu {
 display: flex;
 list-style: none;
@@ -165,8 +142,6 @@ transition: color 0.3s;
 .menu li a:hover {
 color: #00a551;
 }
-
-/* MÓVIL */
 @media (max-width: 768px) {
 .hamburger {
   display: flex;
@@ -213,7 +188,6 @@ color: #00a551;
   display: block;
 }
 }
-/* Variables corporativas */
 :root {
   --verde: #009639;
   --naranja: #FFA400;
@@ -221,7 +195,6 @@ color: #00a551;
   --gris-claro: #f5f5f5;
   --gris-oscuro: #333;
 }
-/* Hero */
 .hero {
   display: flex;
   flex-direction: column;
@@ -249,8 +222,6 @@ color: #00a551;
   max-width: 100%;
   border-radius: 10px;
 }
-
-/* Contactos */
 .contact-options {
   display: flex;
   flex-direction: column;
@@ -277,8 +248,6 @@ color: #00a551;
   color: var(--azul);
   text-decoration: none;
 }
-
-/* FAQ */
 .faq {
   background: var(--gris-claro);
   padding: 2em 1em;
@@ -297,8 +266,6 @@ color: #00a551;
   font-size: 1em;
   line-height: 1.8em;
 }
-
-/* Footer */
 .footer {
   background: var(--azul);
   color: white;
@@ -306,8 +273,6 @@ color: #00a551;
   padding: 1em;
   font-size: 0.9em;
 }
-
-/* Responsive */
 @media (min-width: 768px) {
   .hero {
     flex-direction: row;
@@ -333,7 +298,6 @@ color: #00a551;
     width: 30%;
   }
 }
-/* Acordeón FAQ */
 .accordion {
   max-width: 700px;
   margin: auto;
@@ -389,9 +353,6 @@ color: #00a551;
   color: #444;
   font-size: 0.95em;
 }
- 
-  /* Estilo general del footer */
-/* Footer general */
 .footer {
   background-color: #ffffff;
   color: #000000;
@@ -447,26 +408,21 @@ color: #00a551;
   display: flex;
   gap: 15px;
 }
-
 .footer-socials {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra horizontalmente el contenido */
+  align-items: center; 
   text-align: center;
 }
-
-/* Estilo para los íconos de redes sociales */
 .social-icons a {
-  color: #00a551; /* Color verde por defecto */
+  color: #00a551; 
   font-size: 1.5rem;
-  transition: color 0.3s ease; /* Suaviza la transición de color */
+  transition: color 0.3s ease; 
 }
 
 .social-icons a:hover {
-  color: #ef7f11; /* Color naranja al pasar el ratón */
+  color: #ef7f11; 
 }
-
-
 .footer-subscribe form {
   display: flex;
   flex-wrap: wrap;
@@ -514,8 +470,6 @@ color: #00a551;
 .footer-logo img:hover {
   transform: scale(1.1);
 }
-
-/* Políticas y derechos */
 .footer-policies {
   background-color: #333;
   padding: 10px 0;
@@ -548,8 +502,6 @@ color: #00a551;
   font-size: 1rem;
   color: #00a551;
 }
-
-/* Responsivo para móviles */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -572,8 +524,6 @@ color: #00a551;
     margin: 5px 0;
   }
 }
-
-/* Responsivo para móviles */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -596,28 +546,25 @@ color: #00a551;
     margin: 5px 0;
   }
 }
-/* Estilo para el icono de WhatsApp */
 .whatsapp-icon {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: white; /* Fondo blanco */
-  color: #25d366; /* Color del icono (verde de WhatsApp) */
-  border-radius: 50%; /* Hace que sea un círculo */
-  padding: 10px; /* Espaciado interno pequeño */
-  font-size: 24px; /* Tamaño de la fuente para hacerlo pequeño */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto flotante */
-  text-decoration: none; /* Elimina el subrayado del enlace */
-  z-index: 1000; /* Asegura que el icono esté por encima de otros elementos */
-  width: 50px; /* Ancho del círculo */
-  height: 50px; /* Alto del círculo */
+  background-color: white; 
+  color: #25d366; 
+  border-radius: 50%; 
+  padding: 10px; 
+  font-size: 24px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  text-decoration: none; 
+  z-index: 1000; 
+  width: 50px; 
+  height: 50px; 
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-/* Efecto de hover para cuando el usuario pasa el ratón por encima */
 .whatsapp-icon:hover {
-  background-color: #25d366; /* Fondo verde cuando se pasa el ratón */
-  color: white; /* Cambiar el color del icono a blanco al hacer hover */
+  background-color: #25d366; 
+  color: white; 
 }
