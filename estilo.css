@@ -538,15 +538,24 @@ body {
   gap: 15px;
 }
 
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente el contenido */
+  text-align: center;
+}
+
+/* Estilo para los íconos de redes sociales */
 .social-icons a {
-  color: #000000;
+  color: #00a551; /* Color verde por defecto */
   font-size: 1.5rem;
-  transition: color 0.3s;
+  transition: color 0.3s ease; /* Suaviza la transición de color */
 }
 
 .social-icons a:hover {
-  color: #00a551;
+  color: #ef7f11; /* Color naranja al pasar el ratón */
 }
+
 
 .footer-subscribe form {
   display: flex;
@@ -687,4 +696,29 @@ body {
   .hamburger.active span:nth-child(2) {
     opacity: 1 !important;
   }
+}
+/* Estilo para el icono de WhatsApp */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white; /* Fondo blanco */
+  color: #25d366; /* Color del icono (verde de WhatsApp) */
+  border-radius: 50%; /* Hace que sea un círculo */
+  padding: 10px; /* Espaciado interno pequeño */
+  font-size: 24px; /* Tamaño de la fuente para hacerlo pequeño */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto flotante */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  z-index: 1000; /* Asegura que el icono esté por encima de otros elementos */
+  width: 50px; /* Ancho del círculo */
+  height: 50px; /* Alto del círculo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Efecto de hover para cuando el usuario pasa el ratón por encima */
+.whatsapp-icon:hover {
+  background-color: #25d366; /* Fondo verde cuando se pasa el ratón */
+  color: white; /* Cambiar el color del icono a blanco al hacer hover */
 }
